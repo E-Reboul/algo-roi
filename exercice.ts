@@ -158,8 +158,8 @@ const is_prime = (n: number) => {
         if (n % i === 0) {
             return false;
         }
-        return true;
     }
+    return true;
 }
 
 console.log(is_prime(5));
@@ -177,7 +177,7 @@ const pgcd = (a: number, b: number) => {
 
 console.log(pgcd(5, 4));
 
-const is_perfect = (n: number) => {
+const is_perfect = (n: number): boolean => {
     let result = 0;
 
     for (let i = 0; i < n; i++) {
@@ -185,11 +185,24 @@ const is_perfect = (n: number) => {
             result += i;
         }
     }
-    return result;
+    return result === n;
 }
 
-console.log(is_perfect(8));
+console.log(is_perfect(6));
 
 /*
     EXERCICES 3 : 
 */
+
+const h_triangle = (h: number): string => {
+    let star: string = '*';
+    let lineBreak: string = '\n'
+    let result: string = '';
+
+    for (let i = 1; i < h; i++) {
+        result += star.repeat(i) + lineBreak;
+    }
+    return result;
+}
+
+console.log(h_triangle(5));
