@@ -153,7 +153,7 @@ const sum_even = (n: number): number => {
 
 console.log(sum_even(85));
 
-const is_prime = (n: number) => {
+const is_prime = (n: number): boolean => {
     for (let i = 2; i < n; i++) {
         if (n % i === 0) {
             return false;
@@ -166,7 +166,7 @@ console.log(is_prime(5));
 
 const pgcd = (a: number, b: number) => {
     while(b !== 0) {
-        let restInB = b;
+        let restInB: number = b;
 
         b = a % b;
 
@@ -178,7 +178,7 @@ const pgcd = (a: number, b: number) => {
 console.log(pgcd(5, 4));
 
 const is_perfect = (n: number): boolean => {
-    let result = 0;
+    let result: number = 0;
 
     for (let i = 0; i < n; i++) {
         if (n % i === 0) {
@@ -206,3 +206,53 @@ const h_triangle = (h: number): string => {
 }
 
 console.log(h_triangle(5));
+
+const rectangle = (n: number, m: number): string => {
+    let star: string = '*';
+    let lineBreak: string = '\n';
+    let result: string = '';
+
+    for (let i = 0; i < n; i++) {
+        result += star.repeat(m) + lineBreak;
+    }
+    return result;
+}
+
+console.log(rectangle(4, 8));
+
+const reverse_ints = (n: number) => {
+    let result = '';
+
+    for (let i = 0; i < n; i++) {
+        result = result.concat(String(n - i));
+    }
+    return result;
+}
+
+console.log(reverse_ints(10));
+
+const int_pyramid = (n: number) => {
+    let lineBreak = '\n';
+    let storage = '';
+    let result = '';
+
+    for (let i = 0; i < n; i++) {
+        storage += (i + 1);
+        result += storage + lineBreak;
+        
+    }
+    return result;
+}
+
+console.log(int_pyramid(5));
+
+const beautiful_mult = (n: number) => {
+    let result = '';
+
+    for (let i = 0; i < 10; i++) {
+        result += `${n} x ${i} = ${n * i}`
+    }
+    return result
+}
+
+console.log(beautiful_mult(5));
