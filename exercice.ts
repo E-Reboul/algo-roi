@@ -247,10 +247,11 @@ const int_pyramid = (n: number) => {
 console.log(int_pyramid(5));
 
 const beautiful_mult = (n: number) => {
+    let comma = ', ';
     let result = '';
 
-    for (let i = 0; i < 10; i++) {
-        result += `${n} x ${i} = ${n * i}`
+    for (let i = 0; i <= 10; i++) {
+        result += `${n} x ${i} = ${n * i}` + comma;
     }
     return result
 }
