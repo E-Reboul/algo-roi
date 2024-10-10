@@ -100,7 +100,7 @@ const print_int = (n: number) => {
 
 console.log(print_int(5));
 
-const sum_int = (n: number) => {
+const sum_int = (n: number): number => {
     let result: number = 0;
     
     for (let i = 0; i <= n; i++) {
@@ -129,3 +129,67 @@ const factorial = (n: number): number => {
 }
 
 console.log(factorial(5));
+
+const power = (x: number, n: number): number => {
+    let result: number = 1;
+    for (let i = 1; i <= n; i++) {
+        result = x * i;
+    }
+    return result;
+}
+
+console.log(power(5, 4));
+
+const sum_even = (n: number): number => {
+    let result = 0;
+
+    for (let i = 0; i <= n; i++) {
+        if (i % 2 === 0) {
+            result += i;
+        }
+    }
+    return result;
+}
+
+console.log(sum_even(85));
+
+const is_prime = (n: number) => {
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+        return true;
+    }
+}
+
+console.log(is_prime(5));
+
+const pgcd = (a: number, b: number) => {
+    while(b !== 0) {
+        let restInB = b;
+
+        b = a % b;
+
+        a = restInB;
+    }
+    return a;
+}
+
+console.log(pgcd(5, 4));
+
+const is_perfect = (n: number) => {
+    let result = 0;
+
+    for (let i = 0; i < n; i++) {
+        if (n % i === 0) {
+            result += i;
+        }
+    }
+    return result;
+}
+
+console.log(is_perfect(8));
+
+/*
+    EXERCICES 3 : 
+*/
